@@ -13,4 +13,4 @@ chmod +x install.sh
 ## Usage
 The service starts automatically after installation and after rebooting the controller.
 
-For manual control use the systemctl commands.
+For manual control use the `systemctl` commands.
