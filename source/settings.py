@@ -1,4 +1,4 @@
-MQTT_BROKER_IP = '192.168.13.131'
+MQTT_BROKER_IP = 'localhost'
 ROOT_MQTT_TOPIC = '/devices/deltaups'
 DELTA_UPS_TOPIC = '/deltaups/#'
 DELTA_UPS_NAME = 'Delta UPS'
