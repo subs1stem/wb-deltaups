@@ -4,7 +4,7 @@ from settings import *
 
 
 def on_connect(mqtt_client, _userdata, _flags, rc):
-    print('Connected to MQTT broker with result code ' + str(rc))
+    #  print('Connected to MQTT broker with result code ' + str(rc))
     mqtt_client.subscribe(DELTA_UPS_TOPIC)
 
 

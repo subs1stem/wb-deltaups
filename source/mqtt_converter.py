@@ -22,12 +22,12 @@ CUSTOM_UNITS = {
 
 def send_converted_message(client, topic, payload):
     payload = json.loads(payload.decode())
-    print(topic + ' ' + str(payload))
+    #  print(topic + ' ' + str(payload))
 
     control = topic.split('/')[-1]
     control_topic = '{root_topic}/controls/{control}'.format(root_topic=ROOT_MQTT_TOPIC,
                                                              control=control)
-    control_units_topic = '{control_topic}/units'.format(control_topic=control_topic)
+    control_units_topic = '{control_topic}/meta/units'.format(control_topic=control_topic)
     control_type_topic = '{control_topic}/meta/type'.format(control_topic=control_topic)
     control_order_topic = '{control_topic}/meta/order'.format(control_topic=control_topic)
     control_error_topic = '{control_topic}/meta/error'.format(control_topic=control_topic)
@@ -48,6 +48,7 @@ def send_converted_message(client, topic, payload):
             try:
                 payload_units = CUSTOM_UNITS[payload['unit']]
             except KeyError:
+                payload_type = 'text'
                 payload_units = None
 
     elif 'online' in payload:
