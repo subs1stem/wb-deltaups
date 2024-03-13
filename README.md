@@ -1,5 +1,5 @@
 # wb-deltaups
-Module for integrating the Delta UPS into the Wiren Board controller
+Module for integrating Delta UPS into Wiren Board controller
 
 ## Installation
 On Wiren Board controller:
